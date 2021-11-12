@@ -40,7 +40,7 @@ $data = mysqli_query($conn, $sql);
         <a class="nav-link" href="src/views/movimentacoes.php">Movimentações</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Relatório</a>
+        <a class="nav-link" href="src/views/relatorio.php">Relatório</a>
       </li>
     </ul>
   </div>
