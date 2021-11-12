@@ -91,9 +91,9 @@ $data = mysqli_query($conn, $sql);
                 <td>$status</td>
                 <td>$categoria</td>
                 <td>
-                    <a href='src/views/editCadastro.php' class='btn btn-success btn-sm'>Editar</a>
-                    <a href='src/views/moveCadastro.php' class='btn btn-primary btn-sm'>Movimentar</a>
-                    <a href='src/scripts/delete.php' class='btn btn-danger btn-sm'>Excluir</a>
+                    <a href='src/views/editCadastro.php?id=$cd' class='btn btn-success btn-sm'>Editar</a>
+                    <a href='src/views/moveCadastro.php?id=$cd' class='btn btn-primary btn-sm'>Movimentar</a>
+                    <a href='src/scripts/delete.php?id=$cd' class='btn btn-danger btn-sm'>Excluir</a>
                 </td>
                 </tr>";
             }
