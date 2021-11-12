@@ -27,15 +27,15 @@
         <div class="row">
             <div class="col">
                 <h2>Cadastro</h2>
-                <form action="../scripts/cadastroScript.php" method="POST">
+                <form action="../scripts/editCadastroScript.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="cliente">Nome</label>
-                            <input type="text" class="form-control" name="cliente" required>
+                            <input type="text" class="form-control" name="cliente" required value="<?php echo $row['cliente']; ?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="container">Numero do container</label>
-                            <input type="text" class="form-control" name="container" required>
+                            <input type="text" class="form-control" name="container" required value="<?php echo $row['container']; ?>">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="tipo">Tipo</label>
@@ -60,6 +60,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
+                    <input type="hidden" name="id" value="<?php echo $row['cd']; ?>">
                 </form>
                 <a href='../../index.php' class="btn btn-danger">Cancelar</a>
             </div>
