@@ -35,7 +35,7 @@ $data = mysqli_query($conn, $sql);
                                 <a class="nav-link" href="views/cadastro.php">Cadastro</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="movimentacoes.php">Movimentação</a>
+                                <a class="nav-link" href="movimentacoes.php">Movimentações</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="relatorio.php">Relatórios</a>
@@ -71,7 +71,7 @@ $data = mysqli_query($conn, $sql);
                                     case 6 : $tipoMovimentacao = "Scanner"; break;
                                 }
                                 $start = $row['startDate'];
-                                $end = $row['endDate'];
+                                $end = $row['startEnd'];
                                 echo "<tr>
                                 <th scope='row'>$container</th>
                                 <td>$tipoMovimentacao</td>
