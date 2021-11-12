@@ -1,4 +1,6 @@
 <?php
+// Conexão feita em linguangem estilo procedural
+
     $server = "localhost";
     $user = "root";
     $pass = "";
