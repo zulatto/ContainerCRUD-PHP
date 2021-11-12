@@ -2,6 +2,19 @@
 
 Repositório criado com finalidade de atender ao teste prático oferecido pela empresa T2S
 
+Teste consiste em um CRUD de container, um log com suas movimentações e um relatório contedo,
+a quantidade de movimentação agrupadas por nome de cliente e tipo de movimentação.
+
+Tecnologias usadas
+- PHP
+- Mysql 
+
+Frameworks
+- Bootstrap 4.3
+
+IDE
+- Visual Studio Code
+
 DATABASE
 
 CREATE TABLE container (
