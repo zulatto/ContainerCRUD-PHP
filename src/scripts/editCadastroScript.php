@@ -12,9 +12,13 @@
     SET `cliente`='$cliente',`container`='$container',`type`='$tipo',`state`='$status',`category`='$categoria'
     WHERE cd = $id";
 
-    if( mysqli_query($conn, $sql)){
-        echo "alterado";
-    }else{
-        echo "n alterado";
-    }
+if(mysqli_query($conn, $sql)){
+    echo "<script>alert('container editado');
+    window.location.href = '../../index.php';
+    </script>";
+}else{
+    echo "<script>alert('container nao editado');
+    window.location.href = '../../index.php';
+    </script>";
+}
 ?>

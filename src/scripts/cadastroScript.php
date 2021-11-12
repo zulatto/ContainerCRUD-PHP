@@ -9,9 +9,13 @@
 
     $sql = "INSERT INTO `container`(`cliente`, `container`, `type`, `state`, `category`) VALUES ('$cliente','$container','$tipo','$status','$categoria')";
 
-    if( mysqli_query($conn, $sql)){
-        echo "enviado";
+    if(mysqli_query($conn, $sql)){
+        echo "<script>alert('container cadastrado');
+        window.location.href = '../../index.php';
+        </script>";
     }else{
-        echo "n eviado";
+        echo "<script>alert('container nao cadastrado');
+        window.location.href = '../../index.php';
+        </script>";
     }
 ?>
