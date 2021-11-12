@@ -1,7 +1,6 @@
 <?php
     include '../scripts/header.php';
     include '../scripts/connect.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,33 +10,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/main.css">
-    <title>Editar cadastro container</title>
+    <title>Cadastro container</title>
 </head>
 <body>
 
     <?php
-        $id = $_GET['id'] ?? '';
+                $id = $_GET['id'] ?? '';
 
-        $sql = "SELECT * FROM container WHERE cd = $id";
-
-        $data = mysqli_query($conn, $sql);
-
-        $row = mysqli_fetch_assoc($data);
+                $sql = "SELECT * FROM container WHERE cd = $id";
+        
+                $data = mysqli_query($conn, $sql);
+        
+                $row = mysqli_fetch_assoc($data);
     ?>
-
     <div class="container">
         <div class="row">
             <div class="col">
                 <h2>Cadastro</h2>
-                <form action="../scripts/editCadastroScript.php" method="POST">
+                <form action="../scripts/cadastroScript.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="cliente">Nome</label>
-                            <input type="text" class="form-control" name="cliente" value="<?php echo $row['cliente']; ?>" required>
+                            <input type="text" class="form-control" name="cliente" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="container">Numero do container</label>
-                            <input type="text" class="form-control" name="container" value="<?php echo $row['container']; ?>" required>
+                            <input type="text" class="form-control" name="container" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="tipo">Tipo</label>
@@ -62,7 +60,6 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Salvar</button>
-                    <input type="hidden" name="id" value="<?php echo $row['cd']; ?>">
                 </form>
                 <a href='../../index.php' class="btn btn-danger">Cancelar</a>
             </div>
@@ -70,3 +67,4 @@
     </div>
 </body>
 </html>
+
