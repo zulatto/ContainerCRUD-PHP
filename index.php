@@ -37,7 +37,7 @@ $data = mysqli_query($conn, $sql);
         <a class="nav-link" href="src/views/cadastro.php">Cadastro</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Movimentações</a>
+        <a class="nav-link" href="src/views/moves.php">Movimentações</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Relatório</a>
