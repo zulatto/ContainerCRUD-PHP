@@ -71,7 +71,7 @@ $data = mysqli_query($conn, $sql);
                                     case 6 : $tipoMovimentacao = "Scanner"; break;
                                 }
                                 $start = $row['startDate'];
-                                $end = $row['startEnd'];
+                                $end = $row['endDate'];
                                 echo "<tr>
                                 <th scope='row'>$container</th>
                                 <td>$tipoMovimentacao</td>

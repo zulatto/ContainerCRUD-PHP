@@ -4,7 +4,7 @@
     $server = "localhost";
     $user = "root";
     $pass = "";
-    $db = "teste";
+    $db = "moveContainer";
 
     if( $conn = mysqli_connect($server, $user, $pass, $db)){
     }else{

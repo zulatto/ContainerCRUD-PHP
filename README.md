@@ -18,7 +18,7 @@ IDE
 DATABASE
 
 CREATE TABLE container (
-cd int auto increment not null,
+cd int primary auto_increment not null,
 cliente varchar(200) not null,
 container varchar(11) not null,
 type int not null,

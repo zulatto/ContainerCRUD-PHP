@@ -6,7 +6,7 @@
     $start = $_POST['start'];
     $end = $_POST['end'];
 
-    $sql = "INSERT INTO `movecontainer`(`nmContainer`, `tipoMovimentacao`, `startDate`, `startEnd`) 
+    $sql = "INSERT INTO `movecontainer`(`nmContainer`, `tipoMovimentacao`, `startDate`, `endDate`) 
     VALUES ('$container','$moveTipo','$start','$end')";
 
 if(mysqli_query($conn, $sql)){
