@@ -1,5 +1,5 @@
 <?php 
-    include '../scripts/connect.php';
+    include '../inc/connect.php';
 
     $container = $_POST['container'];
     $moveTipo = $_POST['moveTipo'];

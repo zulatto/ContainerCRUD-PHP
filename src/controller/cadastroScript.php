@@ -1,5 +1,5 @@
 <?php 
-    include '../scripts/connect.php';
+    include '../inc/connect.php';
 
     $cliente = $_POST['cliente'];
     $container = $_POST['container'];

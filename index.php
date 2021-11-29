@@ -1,10 +1,10 @@
 <?php
-include 'src/scripts/header.php';
-include 'src/scripts/connect.php';
+include 'src/inc/header.php';
+include 'src/inc/connect.php';
 
 $search = $_POST['search'] ?? '';
 
-$sql = "SELECT * FROM container WHERE container LIKE '%$search%' AND active = 1";
+$sql = "SELECT * FROM container WHERE container LIKE '%$search%' OR cliente LIKE '%$search%' AND active = 1";
 
 $data = mysqli_query($conn, $sql);
 ?>
@@ -16,7 +16,7 @@ $data = mysqli_query($conn, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/assets/css/main.css">
     <title>Home</title>
 </head>
 <body>
@@ -24,7 +24,7 @@ $data = mysqli_query($conn, $sql);
         <div class="row">
             <div class="col">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Container</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -93,7 +93,7 @@ $data = mysqli_query($conn, $sql);
                 <td>
                     <a href='src/views/editCadastro.php?id=$cd' class='btn btn-success btn-sm'>Editar</a>
                     <a href='src/views/moveContainer.php?id=$cd' class='btn btn-primary btn-sm'>Movimentar</a>
-                    <a href='src/scripts/delete.php?id=$cd' class='btn btn-danger btn-sm'>Excluir</a>
+                    <a href='src/controller/delete.php?id=$cd' class='btn btn-danger btn-sm'>Excluir</a>
                 </td>
                 </tr>";
             }

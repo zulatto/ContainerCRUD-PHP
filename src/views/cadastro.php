@@ -1,5 +1,5 @@
 <?php
-    include '../scripts/header.php';
+    include '../inc/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <h2>Cadastro</h2>
-                <form action="../scripts/cadastroScript.php" method="POST">
+                <form action="../controller/cadastroScript.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="cliente">Nome</label>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="container">Numero do container</label>
-                            <input type="text" class="form-control" name="container" maxlength="11" placeholder="ABCD1234567" required>
+                            <input type="text" class="form-control" name="container" maxlength="11" placeholder="ABCD1234567" oninput="this.value = this.value.toUpperCase()" required>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="tipo">Tipo</label>

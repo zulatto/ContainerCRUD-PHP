@@ -1,6 +1,6 @@
 <?php
-    include '../scripts/header.php';
-    include '../scripts/connect.php';
+    include '../inc/header.php';
+    include '../inc/connect.php';
 
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col">
                 <h2>Cadastro</h2>
-                <form action="../scripts/moveCadastro.php" method="POST">
+                <form action="../controller/moveCadastro.php" method="POST">
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="container">Numero do container</label>

@@ -1,7 +1,7 @@
 <?php
-include '../scripts/header.php';
+include '../inc/header.php';
 
-include '../scripts/connect.php';
+include '../inc/connect.php';
 
 
 $sql_total = "SELECT category, COUNT(cd) AS qtd_category FROM container GROUP BY category";
