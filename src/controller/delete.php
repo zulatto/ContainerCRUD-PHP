@@ -1,7 +1,7 @@
 <?php 
     include '../inc/connect.php';
 
-    $id = $_GET['id'];
+    $id = $_POST['id'];
 
     $sql = "UPDATE `container` 
     SET `active`= 0

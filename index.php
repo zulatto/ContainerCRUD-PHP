@@ -4,7 +4,7 @@ include 'src/inc/connect.php';
 
 $search = $_POST['search'] ?? '';
 
-$sql = "SELECT * FROM container WHERE container LIKE '%$search%' OR cliente LIKE '%$search%' AND active = 1";
+$sql = "SELECT * FROM container WHERE active = 1 AND( container LIKE '%$search%' OR cliente LIKE '%$search%')";
 
 $data = mysqli_query($conn, $sql);
 ?>
@@ -57,6 +57,7 @@ $data = mysqli_query($conn, $sql);
         <th scope="col">Tipo</th>
         <th scope="col">Status</th>
         <th scope="col">Categoria</th>
+        <th scope="col">Funções</th>
         </tr>
     </thead>
     <tbody>
@@ -93,7 +94,9 @@ $data = mysqli_query($conn, $sql);
                 <td>
                     <a href='src/views/editCadastro.php?id=$cd' class='btn btn-success btn-sm'>Editar</a>
                     <a href='src/views/moveContainer.php?id=$cd' class='btn btn-primary btn-sm'>Movimentar</a>
-                    <a href='src/controller/delete.php?id=$cd' class='btn btn-danger btn-sm'>Excluir</a>
+                    <a href='#' class='btn btn-danger btn-sm' data-toggle='modal' data-target='#confirmDelete'
+                    onclick=" . '"' ."getData('$cd', '$container')" . '"' ."
+                    >Excluir</a>
                 </td>
                 </tr>";
             }
@@ -103,5 +106,35 @@ $data = mysqli_query($conn, $sql);
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Confirmação de exclusão</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <form action="src/controller/delete.php" method="POST">
+                <p>Deseja realmente excluir o container <b id="numContainer">Numero container</b>?</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                <input type="hidden" name="id" id="cd_container" value="">
+            <button type="submit" class="btn btn-danger">Sim</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function getData(id, num_Container){
+            document.getElementById('numContainer').innerHTML = num_Container;
+            document.getElementById('cd_container').value = id;
+        }
+    </script>
 </body>
 </html>
