@@ -8,11 +8,11 @@
     WHERE cd = $id";
 
 if(mysqli_query($conn, $sql)){
-    echo "<script>alert('container excluido');
+    echo "<script>alert('Container excluído com sucesso');
     window.location.href = '../../index.php';
     </script>";
 }else{
-    echo "<script>alert('container nao excluido');
+    echo "<script>alert('Falha na exclusão do container, tente novamente mais tarde');
     window.location.href = '../../index.php';
     </script>";
 }

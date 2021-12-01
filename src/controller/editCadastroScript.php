@@ -13,11 +13,11 @@
     WHERE cd = $id";
 
 if(mysqli_query($conn, $sql)){
-    echo "<script>alert('container editado');
+    echo "<script>alert('Container editado com sucesso');
     window.location.href = '../../index.php';
     </script>";
 }else{
-    echo "<script>alert('container nao editado');
+    echo "<script>alert('Falha na edição de container, tente novamente mais tarde');
     window.location.href = '../../index.php';
     </script>";
 }

@@ -10,11 +10,11 @@
     $sql = "INSERT INTO `container`(`cliente`, `container`, `type`, `state`, `category`) VALUES ('$cliente','$container','$tipo','$status','$categoria')";
 
     if(mysqli_query($conn, $sql)){
-        echo "<script>alert('container cadastrado');
+        echo "<script>alert('Container $container cadastrado com sucesso');
         window.location.href = '../../index.php';
         </script>";
     }else{
-        echo "<script>alert('container nao cadastrado');
+        echo "<script>alert('Falha no cadastro do container, tente novamente mais tarde');
         window.location.href = '../../index.php';
         </script>";
     }

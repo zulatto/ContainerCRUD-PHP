@@ -10,11 +10,11 @@
     VALUES ('$container','$moveTipo','$start','$end')";
 
 if(mysqli_query($conn, $sql)){
-    echo "<script>alert('container movimentado');
+    echo "<script>alert('Container movimentado com sucesso');
     window.location.href = '../../index.php';
     </script>";
 }else{
-    echo "<script>alert('container nao movimentado');
+    echo "<script>alert('Falha na movimentação do container, tente novamente mais tarde');
     window.location.href = '../../index.php';
     </script>";
 }
