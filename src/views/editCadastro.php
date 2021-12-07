@@ -35,7 +35,12 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="container">Numero do container</label>
-                            <input type="text" class="form-control" name="container" required oninput="this.value = this.value.toUpperCase()" maxlength="11" value="<?php echo $row['container']; ?>">
+                            <input type="text" class="form-control" name="container" 
+                            maxlength="11"
+                            pattern="[A-Z]{3}.[0-9]{7}" title="4 letras e 7 numeros" 
+                            oninput="this.value = this.value.toUpperCase()"
+                            required
+                            value="<?php echo $row['container']; ?>">
                         </div>
                         <div class="form-group col-md-4">
                             <label for="tipo">Tipo</label>
